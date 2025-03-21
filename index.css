@@ -75,7 +75,7 @@ header {
 	height: 100%;
 	margin: 60px 60px 100px;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, 315px);
+	grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
 	gap: 30px;
 	.film-item {
 		cursor: pointer;
@@ -130,6 +130,9 @@ header {
 		display: flex;
 		flex-direction: row;
 		gap: 40px;
+		.left-section > .movie-length {
+			color: #0F0A33;
+		}
 		.right-section {
 			margin-top: 20px;
 			.description {

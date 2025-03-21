@@ -20,6 +20,25 @@
 		 </form>
  </header>
  <main>
+	 <form class='filter'>
+		 <label for='film-genres'></label>
+		 <select name='film-genres' class='search-select' id='film-genres'>
+		 <option value=''>Выберите жанр</option>
+		 <option value='драма'>Драма</option>
+		 <option value='комедия'>Комедия</option>
+		 <option value='мелодрама'>Мелодрама</option>
+		 <option value='ужасы'>Ужасы</option>
+		 </select>
+		 <label for='film-country'></label>
+		 <select name='film-country' class='search-select' id='film-country'>
+			 <option value=''>Выберите страну</option>
+			 <option value='США'>США</option>
+			 <option value='Россия'>Россия</option>
+			 <option value='Франция'>Франция</option>
+			 <option value='Великобритания'>Великобритания</option>
+		 </select>
+		 <button class='filter-btn' type='submit'>Фильтр</button>
+	 </form>
 	 <div class='films-list'></div>
 	 <div class="modal">
 	 </div>
