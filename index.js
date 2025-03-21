@@ -6,12 +6,20 @@ const filmList = document.querySelector('.films-list')
 const items = document.querySelectorAll('.film-item')
 const modal = document.querySelector('.modal')
 const filterBtn = document.querySelector('.filter-btn')
+const resetBtn = document.querySelector('.reset-btn')
 const filterForm = document.querySelector('.filter')
 filterBtn.addEventListener('click', function(event) {
 	event.preventDefault()
 	const genre = filterForm['film-genres'].value
 	const country = filterForm['film-country'].value
 	searchFilm('', genre, country)
+})
+
+resetBtn.addEventListener('click', function(event) {
+	event.preventDefault()
+	filterForm['film-genres'].value = ''
+	filterForm['film-country'].value = ''
+	searchFilm()
 })
 
 const buildModal = (film) => {
@@ -75,6 +83,8 @@ const getFilmInfo = async (id) => {
 	if (response.ok) {
 		const film = await response.json()
 		buildModal(film)
+	} else {
+		console.log(response.status)
 	}
 }
 
@@ -125,6 +135,8 @@ const searchFilm = async (value = '' , genre = '', country = '') => {
 			}
 			if (isSuitable) filmList.append(item)
 		})
+	} else {
+		console.log(response.status)
 	}
 }
 
