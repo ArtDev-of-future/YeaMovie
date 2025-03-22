@@ -1,4 +1,4 @@
-import {searchFilm} from './api'
+import {searchFilm} from './api.js'
 
 const searchForm = document.querySelector('.search')
 const filterBtn = document.querySelector('.filter-btn')

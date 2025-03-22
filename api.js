@@ -1,4 +1,4 @@
-import {buildModal} from './modal'
+import {buildModal} from './modal.js'
 
 const API = 'https://api.kinopoisk.dev/'
 //const KEY = 'B1N1SWY-8Y7MKN6-H7NBQV2-ETBW9E4'
