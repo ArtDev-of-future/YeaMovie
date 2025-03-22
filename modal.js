@@ -35,7 +35,7 @@ export const buildModal = (film) => {
 	modalFlex.innerHTML = `<div class='left-section'><img src=${film?.poster?.url || 'sources/film-image.png'} alt=''><p class='movie-length'>${film.movieLength ? `Длительность: ${film.movieLength} мин` : ''}</p></div>`
 	const rigthSection = document.createElement('div')
 	rigthSection.classList.add('right-section')
-	rigthSection.innerHTML = `<div class='main-section'><h2>${film.name}</h2><span class='top'>${film.top10 ? 'TOP10' : film.top250 ? 'TOP250' : ''}</span><p class='rating'>${(film.rating.kp).toFixed(1)}</p></div><p class='description'>${film.description}</p><p class='about'>О фильме:</p>`
+	rigthSection.innerHTML = `<div class='main-section'><h2>${film.name}</h2><span class='top'>${film.top10 ? 'TOP10' : film.top250 ? 'TOP250' : ''}</span><p class='rating'>${(film.rating.kp).toFixed(1)}</p></div><p class='description'>${film.description || ''}</p><p class='about'>О фильме:</p>`
 	rigthSection.append(aboutSection)
 	modalContent.innerHTML = `<span class="close">&times;</span>`
 	modalFlex.append(rigthSection)
